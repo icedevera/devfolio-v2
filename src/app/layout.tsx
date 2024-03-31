@@ -4,6 +4,7 @@ import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +34,11 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+      <Script
+        defer
+        src="https://analytics.us.umami.is/script.js"
+        data-website-id="663b3a1f-9155-4018-8fde-b29da1c5ad7f"
+      />
     </html>
   )
 }
